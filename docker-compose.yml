@@ -3,8 +3,8 @@ services:
 
   mysql:
     image: mysql:5.6
-    container_name: team4_mysql
-    hostname: team4_mysql_host
+    container_name: winter-rcc_mysql
+    hostname: winter-rcc_mysql_host
     restart: always
     ports:
       - "3306:3306"
@@ -19,7 +19,7 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    container_name: team4_api  
+    container_name: winter-rcc_api  
     command: go run server.go
     volumes:
       - .:/go/src/app
